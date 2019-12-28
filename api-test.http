@@ -1,0 +1,66 @@
+### Variables
+@BASEURL = http://localhost:5000
+
+### add USER
+POST {{BASEURL}}/api/users
+Content-Type: application/json
+
+{
+    "name": "Edmark Magsalin",
+    "email": "edmarkmagsalidn@gmail.com",
+    "password": "itlognamalaki"
+}
+
+### login USER
+POST {{BASEURL}}/api/auth
+Content-Type: application/json
+
+{
+    "email": "edmarkmagsalidn@gmail.com",
+    "password": "itlognamalaki"
+}
+
+### get USER
+GET {{BASEURL}}/api/auth
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRlZDYzZTE5MmVlOWYwZjU4YjAyZWI2In0sImlhdCI6MTU3NTk2NzIwMSwiZXhwIjoxNTc2MzI3MjAxfQ.Jsjlmf8pmk4LUXIGU_HU2sORxKUt46i-i1uMoaY9_oY
+
+
+### delete USER
+DELETE {{BASEURL}}/api/users/5ded63e192ee9f0f58b02eb6
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRlZDYzZTE5MmVlOWYwZjU4YjAyZWI2In0sImlhdCI6MTU3NTk2NzIwMSwiZXhwIjoxNTc2MzI3MjAxfQ.Jsjlmf8pmk4LUXIGU_HU2sORxKUt46i-i1uMoaY9_oY
+
+### get USER's CONTACT(s)
+GET {{BASEURL}}/api/contacts
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRlZDYzZTE5MmVlOWYwZjU4YjAyZWI2In0sImlhdCI6MTU3NTg5ODc5MiwiZXhwIjoxNTc2MjU4NzkyfQ.eg5Tz2KKLLeZyr5NsonnH0Az2LKGYrB5zyz5w3wT4cE
+
+### add USER's CONTACT
+POST {{BASEURL}}/api/contacts
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRlZTQ5MWJmMGQ2ZTE1OWQ0ZTFlMDAzIn0sImlhdCI6MTU3NTg5NzM3MSwiZXhwIjoxNTc2MjU3MzcxfQ.hkdcvg8LlCbFlZmcYGsR2zEOVq0MkJo1TF0sH7Rt2b8
+
+{
+    "name": "John Doe",
+    "email": "john.doe@gmail.com",
+    "phone": "092222-22222",
+    "type": "professional"
+}
+
+### update USER's CONTACT
+PUT {{BASEURL}}/api/contacts/5dee4f667e4cf63638575677
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRlZTQ5MWJmMGQ2ZTE1OWQ0ZTFlMDAzIn0sImlhdCI6MTU3NTg5NzM3MSwiZXhwIjoxNTc2MjU3MzcxfQ.hkdcvg8LlCbFlZmcYGsR2zEOVq0MkJo1TF0sH7Rt2b8
+
+{
+    "name": "John Doe Doe",
+    "email": "john.doe@gmail.com",
+    "phone": "092222-22222",
+    "type": "professional"
+}
+
+### delete USER's CONTACT
+DELETE {{BASEURL}}/api/contacts/5dee4751f0d6e159d4e1dffd
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRlZTQ5MWJmMGQ2ZTE1OWQ0ZTFlMDAzIn0sImlhdCI6MTU3NTg5NzM3MSwiZXhwIjoxNTc2MjU3MzcxfQ.hkdcvg8LlCbFlZmcYGsR2zEOVq0MkJo1TF0sH7Rt2b8
